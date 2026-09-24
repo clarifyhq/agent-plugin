@@ -8,17 +8,7 @@ Because it follows the Agent Plugins standard, it works in any compatible client
 
 ## Install
 
-**Cursor**
-
-1. Open **Cursor Settings → Plugins**.
-2. Search for **Clarify**.
-3. Click **Install**, then complete the Clarify sign-in prompt.
-
-Or run `/add-plugin clarify` in chat.
-
-**Any Agent Plugins-compatible client**
-
-Point the client at this repository, or add the MCP server directly:
+This is a standard Agent Plugin, so any compatible client can install it. The universal way is to add the Clarify MCP server to the client's MCP config:
 
 ```json
 {
@@ -31,7 +21,13 @@ Point the client at this repository, or add the MCP server directly:
 }
 ```
 
-Auth is OAuth against Clarify. The client prompts for Clarify user login when the plugin connects — there is no API key or client id to configure.
+On first connect the client opens a Clarify sign-in (OAuth) — there is no API key or client id to configure.
+
+Client-specific shortcuts:
+
+- **Cursor** — Settings → Plugins, search **Clarify**, Install (or `/add-plugin clarify`).
+- **Claude Code** — add the block above to your `.mcp.json`, or run `claude mcp add --transport http clarify https://api.clarify.ai/mcp`.
+- **Cline, Codex, and other Agent Plugins clients** — point the client at this repository, or add the server block above to the client's MCP config.
 
 ## Before you connect
 
