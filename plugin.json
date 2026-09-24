@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "clarify",
+  "version": "1.0.0",
+  "description": "Search and update CRM records, lists, campaigns, and meetings in Clarify.",
+  "author": {
+    "name": "Clarify",
+    "email": "support@clarify.ai",
+    "url": "https://clarify.ai"
+  },
+  "homepage": "https://developer.clarify.ai/docs/getting-started/ai-agents",
+  "repository": "https://github.com/clarifyhq/agent-plugin",
+  "license": "MIT",
+  "keywords": [
+    "clarify",
+    "crm",
+    "mcp",
+    "sales",
+    "records",
+    "lists",
+    "campaigns"
+  ],
+  "extensions": {
+    "cursor": {
+      "displayName": "Clarify",
+      "logo": "assets/logo.png",
+      "category": "integrations",
+      "tags": [
+        "clarify",
+        "crm",
+        "sales",
+        "mcp"
+      ]
+    }
+  }
+}

@@ -1,10 +1,14 @@
 # Clarify
 
-Cursor plugin that connects agents to [Clarify](https://clarify.ai), the AI-native CRM, through Clarify's official remote [Model Context Protocol](https://modelcontextprotocol.io/) server.
+A portable [Agent Plugin](https://agent-plugins.org) that connects AI agents to [Clarify](https://clarify.ai), the AI-native CRM, through Clarify's official remote [Model Context Protocol](https://modelcontextprotocol.io/) server.
 
 Search, create, and update CRM records (people, companies, deals, and custom objects), work with lists, campaigns, and email, manage calendar events and meeting transcripts, and run agents and workflows in the signed-in Clarify workspace.
 
+Because it follows the Agent Plugins standard, it works in any compatible client — Cursor, Claude Code, Cline, Codex, and others.
+
 ## Install
+
+**Cursor**
 
 1. Open **Cursor Settings → Plugins**.
 2. Search for **Clarify**.
@@ -12,20 +16,22 @@ Search, create, and update CRM records (people, companies, deals, and custom obj
 
 Or run `/add-plugin clarify` in chat.
 
-## MCP
+**Any Agent Plugins-compatible client**
+
+Point the client at this repository, or add the MCP server directly:
 
 ```json
 {
   "mcpServers": {
     "clarify": {
-      "type": "http",
+      "type": "streamable-http",
       "url": "https://api.clarify.ai/mcp"
     }
   }
 }
 ```
 
-Auth is OAuth against Clarify. Cursor prompts for Clarify user login when the plugin connects — there is no API key or client ID to configure.
+Auth is OAuth against Clarify. The client prompts for Clarify user login when the plugin connects — there is no API key or client id to configure.
 
 ## Before you connect
 
