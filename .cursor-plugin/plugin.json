@@ -1,0 +1,25 @@
+{
+  "name": "clarify",
+  "displayName": "Clarify",
+  "version": "1.1.0",
+  "description": "Search and update CRM records, lists, campaigns, and meetings in Clarify, plus skills that run the plays your GTM team runs every day.",
+  "author": {
+    "name": "Clarify",
+    "email": "support@clarify.ai",
+    "url": "https://clarify.ai"
+  },
+  "homepage": "https://developer.clarify.ai/docs/getting-started/ai-agents",
+  "repository": "https://github.com/clarifyhq/agent-plugin",
+  "license": "MIT",
+  "keywords": [
+    "clarify",
+    "crm",
+    "mcp",
+    "sales",
+    "records",
+    "lists",
+    "campaigns",
+    "skills"
+  ],
+  "logo": "assets/logo.png"
+}

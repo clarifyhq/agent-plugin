@@ -1,14 +1,15 @@
 ---
 name: prospect
-description: Find accounts and contacts that match your ICP with Clarify's Lead Finder and bring them in — deduped against what you already have. Use on "find leads", "prospect", "build a list of companies like X", "who should we go after", "find people at target accounts".
-author: clarify
-version: 1.0.0
+description: Find accounts and contacts that match your ICP with Clarify's Lead Finder and bring them in, deduped against what you already have. Use on "find leads", "prospect", "build a list of companies like X", "who should we go after", "find people at target accounts".
+metadata:
+  author: clarify
+  version: '1.0.0'
 ---
 
 # Prospect
 
 Find net-new accounts and contacts that look like the customer's best-fit buyers, then
-import the good ones — without creating duplicates. This leans on Clarify's **Lead Finder**
+import the good ones without creating duplicates. This leans on Clarify's **Lead Finder**
 and TAM database, so it can discover companies and people that aren't in the CRM yet.
 
 ## When to use
@@ -29,11 +30,11 @@ to name 2–3 existing customers you can treat as the pattern.
    region, role/seniority, signals). Confirm the shape with the user in one line before
    searching.
 2. **Find.** Call **find-leads** with those criteria. This returns candidates from the TAM
-   database — nothing is written yet. Show a sample and the count.
+   database. Nothing is written yet. Show a sample and the count.
 3. **Refine until the search _is_ the list.** Import works off the saved search, not a
-   hand-picked subset — it brings in the top N rows (by your `count`, or all of them).
+   hand-picked subset. It brings in the top N rows (by your `count`, or all of them).
    So you can't cherry-pick individual preview rows; instead tighten or loosen the criteria
-   until the search itself contains the people you want. Narrow beats noisy — better to
+   until the search itself contains the people you want. Narrow beats noisy: better to
    import 30 great fits than 300 maybes.
 4. **Check for overlap.** With **query-data**, see how much of the search is already in the
    CRM (people by email, companies by domain). Import automatically skips records that
@@ -48,7 +49,7 @@ to name 2–3 existing customers you can treat as the pattern.
 - A short summary of the criteria used and how many fit.
 - The sample you reviewed, with overlaps flagged.
 - After import: how many records came in, how many were already known, and the list they
-  landed in — plus the obvious next step ("want me to research the top 10, or line up outreach?").
+  landed in, plus the obvious next step ("want me to research the top 10, or line up outreach?").
 
 ## Notes
 
@@ -57,4 +58,4 @@ to name 2–3 existing customers you can treat as the pattern.
   of the search rather than a subset you picked by hand.
 - If Lead Finder isn't enabled for the workspace, tell the user how to turn it on rather
   than scraping elsewhere.
-- Respect sending/compliance norms — importing a lead is not permission to spam it.
+- Respect sending/compliance norms. Importing a lead isn't permission to spam it.

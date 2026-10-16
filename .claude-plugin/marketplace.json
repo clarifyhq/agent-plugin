@@ -1,0 +1,14 @@
+{
+  "name": "clarify",
+  "owner": {
+    "name": "Clarify",
+    "email": "support@clarify.ai"
+  },
+  "description": "The Clarify CRM plugin: the Clarify MCP connector and GTM skills.",
+  "plugins": [
+    {
+      "name": "clarify",
+      "source": "."
+    }
+  ]
+}

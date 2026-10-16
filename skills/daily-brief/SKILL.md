@@ -1,8 +1,9 @@
 ---
 name: daily-brief
-description: Your day in Clarify — what moved since yesterday, which meetings matter, which replies need you, and what to do first. Use on "daily brief", "what's on today", "catch me up", "what changed", "start my day".
-author: clarify
-version: 1.0.0
+description: Your day in Clarify: what moved since yesterday, which meetings matter, which replies need you, and what to do first. Use on "daily brief", "what's on today", "catch me up", "what changed", "start my day".
+metadata:
+  author: clarify
+  version: "1.0.0"
 ---
 
 # Daily brief
@@ -22,26 +23,28 @@ the team's view.
 
 ## Steps
 
-1. **Today's calendar** — **get-calendar-events** for today (and tomorrow morning). Flag
+1. **Today's calendar**: **get-calendar-events** for today (and tomorrow morning). Flag
    external meetings and anything tied to an open deal.
-2. **What moved** — **query-data** / **query-analytics** for recent changes: deals that
-   changed stage, new deals Clarify detected, deals pushed past their close date, records
+2. **What moved**: **query-data** / **query-analytics** for recent changes: deals that
+   changed stage, new deals Clarify spotted, deals pushed past their close date, records
    created or updated since yesterday.
-3. **Who needs a reply** — surface recent inbound/replies and any campaign replies
+3. **Who needs a reply**: surface recent inbound/replies and any campaign replies
    (**get-campaigns** / **get-campaign-recipients**) waiting on the user.
-4. **Open loops** — tasks, follow-ups, and stalled deals (no activity in N days) that the
+4. **Open loops**: tasks, follow-ups, and stalled deals (no activity in N days) that the
    user owns.
 
 ## Output
 
-A tight, skimmable brief in the user's voice — not a data dump:
+Write it in Clarify's voice: [writing-in-voice](../../references/writing-in-voice.md).
 
-- **First thing** — the single most important action, called out up top.
-- **Meetings** — today's calls, who's on them, and which have an open deal; offer
+A tight, skimmable brief, not a data dump:
+
+- **First thing**: the single most important action, called out up top.
+- **Meetings**: today's calls, who's on them, and which have an open deal; offer
   `meeting-prep` for the important one.
-- **Moved** — deals and records that changed, newest first.
-- **Needs you** — replies and asks waiting on the user.
-- **At risk** — stalled or slipping deals worth a nudge; offer `pipeline-review` for the full picture.
+- **Moved**: deals and records that changed, newest first.
+- **Needs you**: replies and asks waiting on the user.
+- **At risk**: stalled or slipping deals worth a nudge; offer `pipeline-review` for the full picture.
 
 Keep it to what a person can act on before their coffee's cold. Link out, don't transcribe.
 

@@ -1,15 +1,16 @@
 ---
 name: meeting-followup
 description: Turn what was said on a call into a shareable snippet, a follow-up email draft in your voice, and the CRM updates that keep the deal moving. Use on "write my follow-up", "post-call", "update the CRM from my meeting", "what are the next steps from that call".
-author: clarify
-version: 1.0.0
+metadata:
+  author: clarify
+  version: '1.0.0'
 ---
 
 # Meeting follow-up
 
 The after-call workflow, done in one pass: capture the moments that matter, draft the
 follow-up, and log the outcomes so the CRM reflects what actually happened. Clarify has the
-transcript, so the follow-up and the updates come from what was really said — not memory.
+transcript, so the follow-up and the updates come from what was really said, not memory.
 
 ## When to use
 
@@ -32,10 +33,11 @@ right stage/fields.
 3. **Snippet the moments (if available).** For the highlights worth sharing, use
    **create-meeting-snippet** so the team can see the exact exchange. Skip this if the
    workspace doesn't expose snippets.
-4. **Draft the follow-up.** **create-email-draft** — a short recap in the sender's voice
+4. **Draft the follow-up.** **create-email-draft**: a short recap in the sender's voice
    (match the sender, not Clarify's brand voice; keep it short and grounded in what was
    actually said): thank them, confirm what was agreed, restate next steps and owners, one
-   clear ask. Leave it as a draft for the user to review.
+   clear ask. Leave it as a draft for the user to review. [writing-in-voice](../../references/writing-in-voice.md) covers
+   prospect-facing copy.
 5. **Update the CRM.** **create-or-update-records** to reflect reality: advance the deal
    stage, update close date/amount if they changed, log the next step, add new contacts met.
    Use **add-comment** for context that doesn't belong in a field.
@@ -51,6 +53,6 @@ right stage/fields.
 
 ## Notes
 
-- Writes to the workspace — always confirm the email and the record updates first.
+- Writes to the workspace, so always confirm the email and the record updates first.
 - `send-email` and advancing a deal are confirm-before-act. Drafting and summarizing are safe.
 - If you can't get a transcript, ask the user for notes and run the same follow-up from those.

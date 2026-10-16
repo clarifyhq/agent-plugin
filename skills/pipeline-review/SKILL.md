@@ -1,8 +1,9 @@
 ---
 name: pipeline-review
-description: One shareable page on your pipeline — what's moving, what's at risk, and what to do this week — built from your real deal data. Use on "pipeline review", "how's my pipeline", "what's at risk", "forecast", "deal review", "what should I work this week".
-author: clarify
-version: 1.0.0
+description: One shareable page on your pipeline (what's moving, what's at risk, and what to do this week), built from your real deal data. Use on "pipeline review", "how's my pipeline", "what's at risk", "forecast", "deal review", "what should I work this week".
+metadata:
+  author: clarify
+  version: '1.0.0'
 ---
 
 # Pipeline review
@@ -26,7 +27,7 @@ right stages, amount, close-date, and owner fields. Confirm scope: just the user
 
 1. **The shape.** **query-analytics** for pipeline by stage, total open value, and how it's
    changed (created, advanced, slipped) over the period.
-2. **What's moving.** **query-data** for deals that advanced or were newly detected — the
+2. **What's moving.** **query-data** for deals that advanced or were newly spotted: the
    momentum story.
 3. **What's at risk.** Deals that are stalled (no activity in N days), past close date, or
    stuck in a late stage too long. This is the part people actually act on.
@@ -37,13 +38,15 @@ right stages, amount, close-date, and owner fields. Confirm scope: just the user
 
 ## Output
 
+Write it in Clarify's voice: [writing-in-voice](../../references/writing-in-voice.md).
+
 One skimmable page:
 
-- **Headline** — open pipeline value, # of deals, and the net change this period.
-- **By stage** — where value sits, with anything unusual called out.
-- **Moving** — the deals with momentum.
-- **At risk** — stalled/slipping deals, newest problems first, each with the reason.
-- **Do this week** — a short, specific action list tied to named deals.
+- **Headline**: open pipeline value, # of deals, and the net change this period.
+- **By stage**: where value sits, with anything unusual called out.
+- **Moving**: the deals with momentum.
+- **At risk**: stalled/slipping deals, newest problems first, each with the reason.
+- **Do this week**: a short, specific action list tied to named deals.
 
 Lead with the one thing that matters most; don't bury it under a table.
 
