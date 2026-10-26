@@ -1,6 +1,6 @@
 # Clarify
 
-A portable [Agent Plugin](https://agent-plugins.org) that connects AI agents to [Clarify](https://clarify.ai), the AI-native CRM, through Clarify's official remote [Model Context Protocol](https://modelcontextprotocol.io/) server, and teaches them the plays your GTM team runs every day.
+A portable [Agent Plugin](https://agent-plugins.org) that connects AI agents to [Clarify](https://clarify.ai), the full-stack CRM, through Clarify's official remote [Model Context Protocol](https://modelcontextprotocol.io/) server, and teaches them the plays your GTM team runs every day.
 
 Search, create, and update CRM records (people, companies, deals, and custom objects), work with lists, campaigns, and email, manage calendar events and meeting transcripts, and run agents and workflows in the signed-in Clarify workspace. The bundled **skills** turn those raw tools into end-to-end workflows: prospect, research, prep for a call, follow up, run outreach, and review your pipeline.
 
@@ -91,6 +91,7 @@ The hosted runtime is the source of truth for tool names and schemas. A workspac
 
 - Tool calls run as the Clarify user who authorizes the connection and can't exceed that user's permissions.
 - Read operations are auto-approved. Write operations request confirmation before they change workspace data.
+- The connector can send email on your behalf and only does so after you confirm the action.
 - Clarify hosts the server itself. This plugin doesn't wrap a local stdio server.
 - Revoke access at any time from your Clarify account settings.
 
