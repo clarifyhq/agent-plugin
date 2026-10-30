@@ -95,6 +95,29 @@ The hosted runtime is the source of truth for tool names and schemas. A workspac
 - Clarify hosts the server itself. This plugin doesn't wrap a local stdio server.
 - Revoke access at any time from your Clarify account settings.
 
+## Building for OpenAI ChatGPT submission
+
+To submit this plugin to OpenAI's ChatGPT plugin directory:
+
+1. Create a ZIP archive of the plugin contents:
+
+   ```bash
+   zip -r clarify-plugin.zip . -x "*.git*" -x "node_modules/*" -x ".DS_Store"
+   ```
+
+2. Ensure the following are in place outside this repository:
+   - Domain verification token at `https://clarify.ai/.well-known/openai-apps-challenge`
+   - Test reviewer account without MFA enabled
+   - OAuth/DCR configuration validated with OpenAI portal (API-key auth not supported)
+   - Demo recording video URL (update `review.demo_recording_url` in plugin.json when available)
+
+3. Submit the ZIP through the OpenAI ChatGPT plugin directory portal
+
+For submission requirements, see:
+
+- https://developers.openai.com/plugins/deploy/submission
+- https://developers.openai.com/plugins/deploy/submission-errors
+
 ## Docs
 
 - Connect an AI agent to Clarify: https://developer.clarify.ai/docs/getting-started/ai-agents

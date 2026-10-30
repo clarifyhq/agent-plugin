@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clarify",
-  "version": "1.2.0",
+  "version": "2.1.0",
   "description": "Search and update CRM records, lists, campaigns, and meetings in Clarify, plus skills that run the plays your GTM team runs every day.",
   "author": {
     "name": "Clarify",
@@ -20,5 +20,91 @@
     "lists",
     "campaigns",
     "skills"
-  ]
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Clarify",
+        "shortDescription": "Full-stack CRM for GTM teams",
+        "longDescription": "Connect Clarify and work with your CRM in natural language. Retrieve, create, and update records, analyze your pipeline, and generate insights, all through conversation.\n\nQuery deals, companies, people, and meetings without switching apps. Find and import new leads that match your ICP directly from the conversation. Create tasks, lists, and outbound sequences automatically.\n\nBuild and configure Clarify Agents from ChatGPT to automate your entire GTM motion.\n\nYour Clarify data is retrieved in real-time, and permissions are respected.\n\nStop clicking through interfaces. Just ask what you need.\n\nThis update adds 9 bundled skills that run the plays your GTM team runs every day: setup, daily brief, meeting prep and follow-up, pipeline review, account research, prospecting with Lead Finder, and campaign outreach. The skills can send emails and launch campaigns directly from ChatGPT.",
+        "developerName": "Clarify",
+        "category": "Business & Operations",
+        "capabilities": [
+          "Search and update CRM records",
+          "Build lists and campaigns",
+          "Prep and follow up on meetings",
+          "Review pipeline",
+          "Find leads"
+        ],
+        "websiteURL": "https://clarify.ai",
+        "supportURL": "https://clarify.ai/support",
+        "privacyPolicyURL": "https://clarify.ai/privacy",
+        "termsOfServiceURL": "https://clarify.ai/terms",
+        "defaultPrompt": [
+          "Give me my daily brief in Clarify.",
+          "Prep me for my next meeting.",
+          "Which deals are at risk this quarter?"
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      },
+      "onboardingSkill": "./skills/clarify-setup/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Daily brief",
+              "prompt": "Give me my daily brief in Clarify.",
+              "tools_triggered": "get-current-user, get-calendar-events, query-data",
+              "expected_behavior": "Summarize today's meetings, deals that changed since yesterday, and replies needing attention, using only test workspace data."
+            },
+            {
+              "description": "Meeting prep",
+              "prompt": "Prep me for my next meeting.",
+              "tools_triggered": "get-calendar-events, query-data, get-transcript",
+              "expected_behavior": "Identify the next calendar event, list attendees with their companies and open deals, and summarize the last recorded conversation."
+            },
+            {
+              "description": "Pipeline review",
+              "prompt": "Which open deals are at risk this quarter?",
+              "tools_triggered": "query-data, query-analytics",
+              "expected_behavior": "List open deals closing this quarter with stale activity or slipped close dates, with amounts and stages from the workspace."
+            },
+            {
+              "description": "Update a record",
+              "prompt": "Move the Acme deal to Negotiation and add a note that pricing was sent.",
+              "tools_triggered": "query-data, create-or-update-records, add-comment",
+              "expected_behavior": "Find the Acme deal, update its stage to Negotiation, add the comment, and confirm the change."
+            },
+            {
+              "description": "Prospect with Lead Finder",
+              "prompt": "Find 10 VP Sales contacts at Series B SaaS companies in Seattle.",
+              "tools_triggered": "find-leads",
+              "expected_behavior": "Return matching candidates from Lead Finder, flag any already in the CRM, and ask before importing anything."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unsupported travel booking",
+              "prompt": "Book me a flight to Seattle for next Tuesday."
+            },
+            {
+              "description": "Unsupported payment",
+              "prompt": "Charge Acme's credit card for their renewal."
+            },
+            {
+              "description": "Access outside the connected workspace",
+              "prompt": "Show me deals from a competitor's Clarify workspace."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Clarify does not sell products or process payments in ChatGPT."
+      },
+      "publication": {
+        "countries": ["US"],
+        "release_notes": "Adds 9 bundled skills (setup, daily brief, meeting prep, meeting follow-up, pipeline review, research, prospect, outreach, and API) to the existing Clarify MCP app."
+      }
+    }
+  }
 }
