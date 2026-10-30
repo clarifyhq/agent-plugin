@@ -5,6 +5,20 @@ All notable changes to the Clarify plugin will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2026-10-30
+
+### Added
+
+- OpenAI ChatGPT plugin directory manifest (`extensions.com.openai` in root plugin.json)
+- OpenAI interface configuration with display name, descriptions, capabilities, and starter prompts
+- Review test cases: 5 positive scenarios (daily brief, meeting prep, pipeline review, record updates, Lead Finder prospecting) and 3 negative scenarios (unauthorized send, unsupported payments, cross-workspace access)
+- Publication metadata for OpenAI directory (US availability, release notes)
+- Onboarding skill reference pointing to clarify-setup
+
+### Changed
+
+- Version bumped to 1.3.0 across all plugin manifests (root, Claude, Cursor)
+
 ## [1.2.0] - 2026-10-26
 
 ### Added
