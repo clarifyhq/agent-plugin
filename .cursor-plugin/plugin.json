@@ -1,8 +1,8 @@
 {
   "name": "clarify",
   "displayName": "Clarify",
-  "version": "1.2.0",
-  "description": "Search and update CRM records, lists, campaigns, and meetings in Clarify, plus skills that run the plays your GTM team runs every day.",
+  "version": "2.1.0",
+  "description": "Full-stack CRM for GTM teams. Search and update records, send emails, launch campaigns, and find new leads in Clarify, plus skills for the plays your team runs every day.",
   "author": {
     "name": "Clarify",
     "email": "support@clarify.ai",

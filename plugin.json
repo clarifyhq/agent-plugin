@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "clarify",
   "version": "2.1.0",
-  "description": "Search and update CRM records, lists, campaigns, and meetings in Clarify, plus skills that run the plays your GTM team runs every day.",
+  "description": "Full-stack CRM for GTM teams. Search and update records, send emails, launch campaigns, and find new leads in Clarify, plus skills for the plays your team runs every day.",
   "author": {
     "name": "Clarify",
     "email": "support@clarify.ai",
@@ -26,7 +26,7 @@
       "interface": {
         "displayName": "Clarify",
         "shortDescription": "Full-stack CRM for GTM teams",
-        "longDescription": "Connect Clarify and work with your CRM in natural language. Retrieve, create, and update records, analyze your pipeline, and generate insights, all through conversation.\n\nQuery deals, companies, people, and meetings without switching apps. Find and import new leads that match your ICP directly from the conversation. Create tasks, lists, and outbound sequences automatically.\n\nBuild and configure Clarify Agents from ChatGPT to automate your entire GTM motion.\n\nYour Clarify data is retrieved in real-time, and permissions are respected.\n\nStop clicking through interfaces. Just ask what you need.\n\nThis update adds 9 bundled skills that run the plays your GTM team runs every day: setup, daily brief, meeting prep and follow-up, pipeline review, account research, prospecting with Lead Finder, and campaign outreach. The skills can send emails and launch campaigns directly from ChatGPT.",
+        "longDescription": "Clarify is a full-stack CRM. Records, enrichment, prospecting, meetings, email, and campaigns live in one place, so ChatGPT can do the work, not just look it up.\n\nAsk ChatGPT to prep you for your next call, flag deals at risk this quarter, or find twenty new leads that fit your ICP. Then have it update the records, build the list, and launch the campaign without bouncing between tools. Most CRM apps stop at a draft. Clarify finishes the job.\n\nClarify also includes Clarify Agents, which you can build and configure right from ChatGPT to automate your GTM motion, plus built-in skills for the plays your team runs every day.",
         "developerName": "Clarify",
         "category": "Business & Operations",
         "capabilities": [
