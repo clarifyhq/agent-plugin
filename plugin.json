@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "clarify",
+  "name": "app-69a558e4555c81919e5072d2be32ba34",
   "version": "2.1.0",
   "description": "Full-stack CRM for GTM teams. Search and update records, send emails, launch campaigns, and find new leads in Clarify, plus skills for the plays your team runs every day.",
   "author": {

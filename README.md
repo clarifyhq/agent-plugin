@@ -97,6 +97,8 @@ The hosted runtime is the source of truth for tool names and schemas. A workspac
 
 ## Building for OpenAI ChatGPT submission
 
+**Note:** The root `plugin.json` uses `"name": "app-69a558e4555c81919e5072d2be32ba34"` instead of `"clarify"` because OpenAI requires the name to match the existing ChatGPT plugin directory listing ID. Claude and Cursor use their platform-specific manifests in `.claude-plugin/` and `.cursor-plugin/`, which maintain `"name": "clarify"`.
+
 To submit this plugin to OpenAI's ChatGPT plugin directory:
 
 1. Create a ZIP archive of the plugin contents:
