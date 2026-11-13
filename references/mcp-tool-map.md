@@ -55,7 +55,7 @@ rather than working around it.
 - **merge-records**: combine duplicates.
 - **create-or-update-fields** / **create-or-update-object**: extend the schema (custom
   fields and objects). `delete-fields` / `delete-custom-object` to remove.
-- **add-comment**: collaborate on a record. **manage-access**: share.
+- **add-comment**: collaborate on a record, or edit a comment you added (pass `comment_id`). **delete-comment**: remove one. **manage-access**: share.
 
 ## Artifacts, agents, workflows
 
