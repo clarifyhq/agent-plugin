@@ -35,6 +35,8 @@ rather than working around it.
 - **create-campaign** / **update-campaign** / **get-campaigns**: campaigns are sequence
   workflows with staggered sending, engagement tracking, and reply detection.
 - **get-campaign-recipients**: who's enrolled and where they are in the sequence.
+- **publish-campaign** turns a campaign on. **update-campaign** with `enabled: false`
+  turns it off and keeps recipients where they are, and publishing again resumes them.
 - **create-email-draft**: draft a single email (style-matched) for review before send.
 - **send-email**: send an email. Treat as a confirm-before-send action.
 
