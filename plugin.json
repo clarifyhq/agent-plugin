@@ -73,7 +73,7 @@
             {
               "description": "Update a record",
               "prompt": "Move the Acme deal to Negotiation and add a note that pricing was sent.",
-              "tools_triggered": "query-data, create-or-update-records, add-comment",
+              "tools_triggered": "query-data, create-or-update-records, create-or-update-comment",
               "expected_behavior": "Find the Acme deal, update its stage to Negotiation, add the comment, and confirm the change."
             },
             {

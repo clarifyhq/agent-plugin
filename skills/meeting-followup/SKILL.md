@@ -40,7 +40,7 @@ right stage/fields.
    prospect-facing copy.
 5. **Update the CRM.** **create-or-update-records** to reflect reality: advance the deal
    stage, update close date/amount if they changed, log the next step, add new contacts met.
-   Use **add-comment** for context that doesn't belong in a field.
+   Use **create-or-update-comment** for context that doesn't belong in a field.
 6. **Confirm before anything leaves.** Show the draft and the proposed updates; apply/send
    only on the user's go-ahead.
 
